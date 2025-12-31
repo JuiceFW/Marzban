@@ -13,6 +13,8 @@ from config import (
     SUB_PROFILE_TITLE,
     SUB_SUPPORT_URL,
     SUB_UPDATE_INTERVAL,
+    SUB_SHOW_WEBSITE,
+    SUB_ANNOUNCEMENT,
     SUBSCRIPTION_PAGE_TEMPLATE,
     USE_CUSTOM_JSON_DEFAULT,
     USE_CUSTOM_JSON_FOR_HAPP,
@@ -68,10 +70,11 @@ def user_subscription(
     crud.update_user_sub(db, dbuser, user_agent)
     response_headers = {
         "content-disposition": f'attachment; filename="{user.username}"',
-        "profile-web-page-url": str(request.url),
+        "profile-web-page-url": str(request.url) if SUB_SHOW_WEBSITE==True else "",
         "support-url": SUB_SUPPORT_URL,
         "profile-title": encode_title(SUB_PROFILE_TITLE),
         "profile-update-interval": SUB_UPDATE_INTERVAL,
+        "announce": SUB_ANNOUNCEMENT,
         "subscription-userinfo": "; ".join(
             f"{key}={val}"
             for key, val in get_subscription_user_info(user).items()
@@ -175,10 +178,11 @@ def user_subscription_with_client_type(
 
     response_headers = {
         "content-disposition": f'attachment; filename="{user.username}"',
-        "profile-web-page-url": str(request.url),
+        "profile-web-page-url": str(request.url) if SUB_SHOW_WEBSITE==True else "",
         "support-url": SUB_SUPPORT_URL,
         "profile-title": encode_title(SUB_PROFILE_TITLE),
         "profile-update-interval": SUB_UPDATE_INTERVAL,
+        "announce": SUB_ANNOUNCEMENT,
         "subscription-userinfo": "; ".join(
             f"{key}={val}"
             for key, val in get_subscription_user_info(user).items()
