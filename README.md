@@ -43,6 +43,14 @@
 
 Marzban (the Persian word for "border guard" - pronounced /mærz'ban/) is a proxy management tool that provides a simple and easy-to-use user interface for managing hundreds of proxy accounts powered by [Xray-core](https://github.com/XTLS/Xray-core) and built using Python and Reactjs.
 
+## Why using this fork?
+
+This fork is oriented by user-experience. It lets you to work with marzban in a bit more ways.
+
+### Fork Features
+
+- New parameters for **Share link**: `SUB_SHOW_WEBSITE` and `SUB_ANNOUNCEMENT` allow you to customize the user`s experience.
+
 ## Why using Marzban?
 
 Marzban is user-friendly, feature-rich and reliable. It lets you to create different proxies for your users without any complicated configuration. Using its built-in web UI, you are able to monitor, modify and limit users.
@@ -287,6 +295,11 @@ By default the app will be run on `http://localhost:8000/dashboard`. You can con
 | USE_CUSTOM_JSON_FOR_V2RAYNG              | Enable custom JSON config only for V2rayNG (default: `False`)                                                            |
 | USE_CUSTOM_JSON_FOR_STREISAND            | Enable custom JSON config only for Streisand (default: `False`)                                                          |
 | USE_CUSTOM_JSON_FOR_V2RAYN               | Enable custom JSON config only for V2rayN (default: `False`)                                                             |
+| SUB_UPDATE_INTERVAL                      | Parameter profile-update-interval (default: `12`)                                                                        |
+| SUB_SUPPORT_URL                          | Parameter support-url. For example: https://t.me/support                                                                 |
+| SUB_PROFILE_TITLE                        | Parameter profile-title (default: `Subscription`)                                                                        |
+| SUB_SHOW_WEBSITE                         | Parameter profile-web-page-url. Toggle for showing profile url (default: `True`)                                         |
+| SUB_ANNOUNCEMENT                         | Parameter announce (default: `Subscription`)                                                                             |
 
 
 # Documentation

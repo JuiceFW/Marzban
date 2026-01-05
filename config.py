@@ -133,7 +133,7 @@ DISABLE_RECORDING_NODE_USAGE = config("DISABLE_RECORDING_NODE_USAGE", cast=bool,
 
 # headers: profile-update-interval, support-url, profile-title, profile-web-page-url, announce
 SUB_UPDATE_INTERVAL = config("SUB_UPDATE_INTERVAL", default="12")
-SUB_SUPPORT_URL = config("SUB_SUPPORT_URL", default="https://t.me/")
+SUB_SUPPORT_URL = config("SUB_SUPPORT_URL", default="")
 SUB_PROFILE_TITLE = config("SUB_PROFILE_TITLE", default="Subscription")
 SUB_SHOW_WEBSITE = config("SUB_SHOW_WEBSITE", default=True, cast=bool)
 SUB_ANNOUNCEMENT = config("SUB_ANNOUNCEMENT", default="Subscription")
