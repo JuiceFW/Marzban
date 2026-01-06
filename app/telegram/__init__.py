@@ -9,7 +9,7 @@ from telebot import TeleBot, apihelper
 bot = None
 if TELEGRAM_API_TOKEN:
     apihelper.proxy = {'http': TELEGRAM_PROXY_URL, 'https': TELEGRAM_PROXY_URL}
-    bot = TeleBot(TELEGRAM_API_TOKEN)
+    bot = TeleBot(TELEGRAM_API_TOKEN, disable_web_page_preview=True)
 
 handler_names = ["admin", "report", "user"]
 
